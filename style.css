@@ -1,0 +1,88 @@
+/* Tiny Server Lab — plain CSS, no frameworks, no external fonts. */
+:root{
+  --bg:#ffffff;
+  --text:#1b1e1c;
+  --muted:#5c665f;
+  --accent:#0e7c5b;
+  --accent-dark:#0a5c44;
+  --card:#f4f7f5;
+  --border:#dfe7e2;
+  --header:#0f1d17;
+  --header-text:#eef5f1;
+  --warn-bg:#fff8e6;
+  --warn-border:#e8c547;
+  --radius:10px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.65;
+  color:var(--text);
+  background:var(--bg);
+}
+a{color:var(--accent-dark);text-decoration:underline;text-underline-offset:2px}
+a:hover{color:var(--accent)}
+img{max-width:100%;height:auto}
+.container{max-width:860px;margin:0 auto;padding:0 1.1rem}
+
+/* Header + nav */
+.site-header{background:var(--header);color:var(--header-text)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.9rem;padding-bottom:.9rem}
+.brand{color:#fff;text-decoration:none;font-weight:700;font-size:1.25rem;letter-spacing:.2px}
+.brand small{display:block;font-weight:400;font-size:.78rem;color:#b9cdc3}
+.site-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.1rem}
+.site-nav a{color:var(--header-text);text-decoration:none;font-weight:600;font-size:.95rem}
+.site-nav a:hover,.site-nav a[aria-current="page"]{color:#7fd6b4}
+
+/* Hero */
+.hero{background:var(--card);border-bottom:1px solid var(--border);padding:2.2rem 0 1.8rem}
+.hero h1{margin:0 0 .4rem;font-size:1.9rem;line-height:1.25}
+.hero p.lede{font-size:1.08rem;color:var(--muted);margin:.3rem 0 0}
+.updated{font-size:.85rem;color:var(--muted);margin-top:.8rem}
+.updated strong{color:var(--text)}
+
+/* Notice box */
+.notice{background:var(--warn-bg);border:1px solid var(--warn-border);border-radius:var(--radius);padding:.8rem 1rem;font-size:.92rem;margin:1.4rem 0}
+
+/* Comparison table */
+.table-wrap{overflow-x:auto;margin:1.2rem 0 2rem;border:1px solid var(--border);border-radius:var(--radius)}
+table.compare{border-collapse:collapse;width:100%;min-width:640px;font-size:.93rem}
+table.compare caption{text-align:left;font-weight:700;padding:.8rem 1rem;background:var(--card)}
+table.compare th,table.compare td{padding:.7rem .8rem;text-align:left;border-top:1px solid var(--border);vertical-align:top}
+table.compare thead th{background:var(--header);color:#fff;border-top:0;white-space:nowrap}
+table.compare tbody tr:nth-child(even){background:#fafcfb}
+.badge{display:inline-block;background:var(--accent);color:#fff;font-size:.72rem;font-weight:700;padding:.15rem .55rem;border-radius:999px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+
+/* Pick cards */
+.pick{border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;margin:1.2rem 0;background:#fff}
+.pick h3{margin:.2rem 0 .5rem;font-size:1.25rem}
+.pick .verdict{margin:.4rem 0 .8rem}
+.spec-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.4rem .9rem;list-style:none;margin:.6rem 0;padding:0;font-size:.92rem}
+.spec-list li{background:var(--card);border-radius:6px;padding:.35rem .6rem}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:.6rem 0 0}
+.pros-cons h4{margin:.2rem 0 .3rem;font-size:.95rem}
+.pros-cons ul{margin:.2rem 0;padding-left:1.2rem;font-size:.93rem}
+@media (max-width:600px){.pros-cons{grid-template-columns:1fr}}
+
+/* Blog */
+.post-list{list-style:none;margin:0;padding:0}
+.post-list li{border-bottom:1px solid var(--border);padding:1.1rem 0}
+.post-list h2,.post-list h3{margin:0 0 .3rem;font-size:1.25rem}
+.post-list time{font-size:.85rem;color:var(--muted)}
+.post-list p{margin:.4rem 0 0;color:var(--muted)}
+article.post h1{font-size:1.8rem;line-height:1.3;margin:1.6rem 0 .3rem}
+article.post .byline{font-size:.88rem;color:var(--muted);margin-bottom:1.2rem}
+article.post h2{margin-top:1.8rem;font-size:1.35rem}
+article.post h3{margin-top:1.4rem;font-size:1.12rem}
+article.post figure{margin:1.2rem 0}
+.read-more{font-weight:600}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--border);margin-top:3rem;padding:1.6rem 0 2.2rem;color:var(--muted);font-size:.88rem}
+.site-footer nav ul{list-style:none;margin:0 0 .8rem;padding:0;display:flex;gap:1rem;flex-wrap:wrap}
+
+/* Skip link for accessibility */
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem 1rem;z-index:99;border:2px solid var(--accent)}
