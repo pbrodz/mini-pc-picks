@@ -1,4 +1,4 @@
-# Tiny Server Lab
+# IRONHOLD
 
 A tiny static site — "best mini PC for home server" top picks plus a blog —
 built as an experiment to see if a niche site can earn real Google traffic.

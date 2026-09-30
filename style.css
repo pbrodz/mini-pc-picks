@@ -1,4 +1,4 @@
-/* Tiny Server Lab — plain CSS, no frameworks, no external fonts. */
+/* IRONHOLD — plain CSS, no frameworks, no external fonts. */
 :root{
   --bg:#ffffff;
   --text:#1b1e1c;
@@ -86,3 +86,10 @@ article.post figure{margin:1.2rem 0}
 /* Skip link for accessibility */
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem 1rem;z-index:99;border:2px solid var(--accent)}
+
+.brand-logo{height:1.9rem;width:auto;vertical-align:-0.45rem;margin-right:.5rem}
+.pick-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:1.2rem 0}
+.pick-grid .pick{margin:0}
+@media (max-width:800px){.pick-grid{grid-template-columns:1fr}}
+.tagline{font-style:italic;font-size:1.05rem;color:var(--accent-dark);margin:.5rem 0 .8rem;line-height:1.45}
+.hist-link{font-size:.85rem;margin:.9rem 0 0;color:var(--muted)}
